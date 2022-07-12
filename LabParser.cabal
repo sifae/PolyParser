@@ -1,0 +1,54 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.33.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: f0422cecc7e731c15be8094284408d4720f1ff794469e257320b9fb42ac1727c
+
+name:           LabParser
+version:        0.0.0.1
+homepage:       https://github.com/.#readme
+bug-reports:    https://github.com/./issues
+author:         Author name here
+maintainer:     example@example.com
+copyright:      2019 Author name here
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+
+source-repository head
+  type: git
+  location: https://github.com/.
+
+library
+  exposed-modules:
+      DiffModule
+      ParserModule
+      PolyModule
+  other-modules:
+      Paths_LabParser
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.7 && <5
+    , mtl
+    , transformers
+  default-language: Haskell2010
+
+executable main-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_LabParser
+  hs-source-dirs:
+      app
+  ghc-options: -threaded
+  build-depends:
+      LabParser
+    , base >=4.7 && <5
+    , mtl
+    , table-layout
+    , transformers
+  default-language: Haskell2010
